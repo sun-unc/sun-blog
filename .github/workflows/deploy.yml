@@ -32,7 +32,8 @@ jobs:
         uses: actions/checkout@main
         # with:
           # fetch-depth: 0 # Not needed if lastUpdated is not enabled 
-      - uses: pnpm/action-pnpm@main # Uncomment this if you're using pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2 # Uncomment this if you're using pnpm
       # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
       - name: Setup Node(安装node)
         uses: actions/setup-node@main
