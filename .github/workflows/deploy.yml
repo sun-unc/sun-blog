@@ -29,21 +29,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout(迁出代码)
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         # with:
           # fetch-depth: 0 # Not needed if lastUpdated is not enabled 
-      - uses: pnpm/action-setup@main # Uncomment this if you're using pnpm
+      # - uses: pnpm/action-pnpm@main # Uncomment this if you're using pnpm
       # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
       - name: Setup Node(安装node)
         uses: actions/setup-node@main
         with:
           node-version: 18
           cache: pnpm # or pnpm / yarn
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Install dependencies
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v3
+      - name: Install dependencies(安装依赖)
         run: pnpm install # or pnpm install / yarn install / bun install
-      - name: Build with VitePress
+      - name: Build with VitePress(打包📦)
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build touch docs/.vitepress/dist/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
