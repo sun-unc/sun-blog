@@ -5,9 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@types/node':
+    specifier: ^20.7.1
+    version: registry.npmmirror.com/@types/node@20.7.1
   vitepress:
     specifier: 1.0.0-rc.20
-    version: registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(search-insights@2.8.2)
+    version: registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.7.1)(search-insights@2.8.2)
 
 packages:
 
@@ -540,6 +543,12 @@ packages:
     version: 1.0.2
     dev: true
 
+  registry.npmmirror.com/@types/node@20.7.1:
+    resolution: {integrity: sha512-LT+OIXpp2kj4E2S/p91BMe+VgGX2+lfO+XTpfXhh+bCk2LkQtHZSub8ewFBMGP5ClysPjTDFa4sMI8Q3n4T0wg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-20.7.1.tgz}
+    name: '@types/node'
+    version: 20.7.1
+    dev: true
+
   registry.npmmirror.com/@types/web-bluetooth@0.0.17:
     resolution: {integrity: sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.17.tgz}
     name: '@types/web-bluetooth'
@@ -936,8 +945,9 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  registry.npmmirror.com/vite@4.4.9:
+  registry.npmmirror.com/vite@4.4.9(@types/node@20.7.1):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.4.9.tgz}
+    id: registry.npmmirror.com/vite/4.4.9
     name: vite
     version: 4.4.9
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -966,6 +976,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': registry.npmmirror.com/@types/node@20.7.1
       esbuild: registry.npmmirror.com/esbuild@0.18.20
       postcss: registry.npmmirror.com/postcss@8.4.30
       rollup: registry.npmmirror.com/rollup@3.29.3
@@ -973,7 +984,7 @@ packages:
       fsevents: registry.npmmirror.com/fsevents@2.3.3
     dev: true
 
-  registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(search-insights@2.8.2):
+  registry.npmmirror.com/vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(@types/node@20.7.1)(search-insights@2.8.2):
     resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-rc.20.tgz}
     id: registry.npmmirror.com/vitepress/1.0.0-rc.20
     name: vitepress
@@ -998,7 +1009,7 @@ packages:
       mark.js: registry.npmmirror.com/mark.js@8.11.1
       minisearch: registry.npmmirror.com/minisearch@6.1.0
       shiki: registry.npmmirror.com/shiki@0.14.4
-      vite: registry.npmmirror.com/vite@4.4.9
+      vite: registry.npmmirror.com/vite@4.4.9(@types/node@20.7.1)
       vue: registry.npmmirror.com/vue@3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
