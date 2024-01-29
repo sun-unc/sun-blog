@@ -31,7 +31,7 @@ jobs:
       - name: Checkout(迁出代码)
         uses: actions/checkout@main
         # with:
-          # fetch-depth: 0 # Not needed if lastUpdated is not enabled 
+        # fetch-depth: 0 # Not needed if lastUpdated is not enabled
       - name: Setup pnpm
         uses: pnpm/action-setup@v2 # Uncomment this if you're using pnpm
         with:

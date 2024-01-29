@@ -1,29 +1,35 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Sun's Blog",
-  description: "A blog that records learning, technology, and programming",
+  description: "前端开发工程师🧑‍💻",
   themeConfig: {
+    logo: { src: "/lpz_transparent.webp", width: 24, height: 24 },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Home", link: "/" },
+      { text: "Examples", link: "/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "Examples",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: "github", link: "https://github.com/sun-unc" },
+    ],
+
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2023-present Sun",
+    },
   },
-  base:"/sun-blog/"
-})
+  base: "/sun-blog/",
+});
