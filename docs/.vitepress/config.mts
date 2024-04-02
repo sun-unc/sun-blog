@@ -8,27 +8,51 @@ export default defineConfig({
     logo: { src: "/lpz_transparent.webp", width: 24, height: 24 },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "主页", link: "/" },
+      { text: "JavaScript", link: "/JavaScript/base/作用域作用域链" },
+      { text: "TypeScript", link: "/TypeScript/" },
+      { text: "Vue", link: "/Vue/" },
+      { text: "前端工程化", link: "/Engineering/" },
+      { text: "其他", link: "/Other/" },
+      { text: "个人简历", link: "/Resume/" },
     ],
 
-    sidebar: [
-      {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
-    ],
+    sidebar: {
+      "/JavaScript/": [
+        {
+          text: "基础",
+          items: [
+            {
+              text: "作用域作用域链",
+              link: "/JavaScript/base/作用域作用域链",
+            },
+          ],
+        },
+        {
+          text: "进阶",
+          items: [
+            {
+              text: "垃圾回收机制",
+              link: "/JavaScript/advance/垃圾回收机制",
+            },
+          ],
+        },
+      ],
+    },
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/sun-unc" },
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/sun-unc" }],
 
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2023-present Sun",
+    },
+
+    lastUpdated: {
+      text: "上次编辑于",
+      formatOptions: {
+        dateStyle: "full",
+        timeStyle: "medium",
+      },
     },
   },
   base: "/sun-blog/",
