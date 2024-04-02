@@ -131,4 +131,4 @@ dist
 .DS_Store
 
 # vitepress catch
-docs/.vitepress/
+docs/.vitepress/cache/
