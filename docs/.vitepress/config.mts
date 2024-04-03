@@ -9,7 +9,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "主页", link: "/" },
-      { text: "JavaScript", link: "/JavaScript/base/作用域作用域链" },
+      { text: "JavaScript", link: "/JavaScript/base/作用域和作用域链" },
       { text: "TypeScript", link: "/TypeScript/" },
       { text: "Vue", link: "/Vue/" },
       { text: "前端工程化", link: "/Engineering/" },
@@ -23,8 +23,8 @@ export default defineConfig({
           text: "基础",
           items: [
             {
-              text: "作用域作用域链",
-              link: "/JavaScript/base/作用域作用域链",
+              text: "作用域和作用域链",
+              link: "/JavaScript/base/作用域和作用域链",
             },
           ],
         },
@@ -38,6 +38,11 @@ export default defineConfig({
           ],
         },
       ],
+    },
+
+    outline: {
+      level: "deep",
+      label: "概要 📖",
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/sun-unc" }],
