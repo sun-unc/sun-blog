@@ -26,6 +26,10 @@ export default defineConfig({
               text: "作用域和作用域链",
               link: "/JavaScript/base/作用域和作用域链",
             },
+            {
+              text: "执行上下文和执行栈",
+              link: "/JavaScript/base/执行上下文和执行栈",
+            },
           ],
         },
         {
