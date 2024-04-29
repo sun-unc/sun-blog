@@ -30,6 +30,10 @@ export default defineConfig({
               text: "执行上下文和执行栈",
               link: "/JavaScript/base/执行上下文和执行栈",
             },
+            {
+              text: "词法环境、变量环境及this指向",
+              link: "/JavaScript/base/词法环境、变量环境及this指向",
+            },
           ],
         },
         {
