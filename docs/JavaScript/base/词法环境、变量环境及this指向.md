@@ -116,7 +116,7 @@ FunctionExecutionContext = {
 
 1. 全局执行上下文中，this 指向全局对象
 2. 函数执行上下文中，this 的值取决于函数是如何被调用的。如果是通过对象引用调用，则 this 指向该对象，否则，this 指向全局对象或 undefined(严格模式下)
-3. 箭头函数没有 this 绑定，箭头函数中的 this 捕获了外层执行上下文中的 this 绑定
+3. 箭头函数没有 this 绑定，**箭头函数中的 this 是在定义时捕获了外层执行上下文中的 this 绑定，而不是在箭头函数执行时**
 
 ```javascript
 globalThis.a = 100;
@@ -124,6 +124,7 @@ function fn() {
   return {
     a: 200,
     b: () => {
+      // 这里的箭头函数中的this定义时指向了fn的执行上下文，所以说是在fn被调用时确定的
       console.log(this.a);
     },
     c: function () {
@@ -140,6 +141,22 @@ const m = fn();
 m.b(); // 100 this指向全局对象
 m.c(); // 200 对象引用调用，this指向m
 m.d()(); //100 相当于独立函数调用 this指向全局对象或undefined
+```
+
+```js
+const obj = {
+  fn() {
+    // 这里的箭头函数是在函数fn里面定义的，而不是在setTimeout内部
+    // 所以这里的this捕获了函数fn的执行上下文中的this绑定，即取决于fn如何被调用的
+    setTimeout(() => {
+      console.log(this);
+    });
+  },
+};
+obj.fn(); //this指向obj
+
+const a = obj.fn;
+a(); //this指向window
 ```
 
 ### 总结
