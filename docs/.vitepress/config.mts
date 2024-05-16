@@ -34,6 +34,14 @@ export default defineConfig({
               text: "词法环境、变量环境及this指向",
               link: "/JavaScript/base/词法环境、变量环境及this指向",
             },
+            {
+              text: "事件循环机制(Event Loop)",
+              link: "/JavaScript/base/事件循环机制(Event Loop)",
+            },
+            {
+              text: "async、await",
+              link: "/JavaScript/base/async、await",
+            },
           ],
         },
         {
